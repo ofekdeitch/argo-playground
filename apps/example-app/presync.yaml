@@ -1,22 +1,22 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  generateName: argo-postsync-notification-
+  generateName: argo-presync-notification-
   annotations:
-    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
       containers:
-      - name: argo-postsync-notification
+      - name: argo-presync-notification
         image: curlimages/curl
         command:
           - "curl"
           - "-X"
           - "POST"
           - "--data-urlencode"
-          - "payload={\"status\": \"Succeeded\",}"
+          - "payload={\"status\": \"Started\",}"
           - "https://90031d807357a17f00b04cdf356d1c4b.serveo.net"
       restartPolicy: Never
   backoffLimit: 2
