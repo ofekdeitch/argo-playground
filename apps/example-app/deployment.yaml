@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: example-app-deployment
   labels:
-    blah: blah
+    blah: blah1
 spec:
   selector:
     matchLabels:
