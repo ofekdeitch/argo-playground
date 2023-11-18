@@ -3,12 +3,12 @@ kind: Deployment
 metadata:
   name: example-app-deployment
   labels:
-    hiroshi.dev/trace-id: 6882c641-23c7-4ad7-bd6b-e851470ba34d
+    hiroshi.dev/trace-id: 75537950-6735-47d0-b424-46e66d58372b
 spec:
   selector:
     matchLabels:
       app: example-app
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: dangoldstein3/aquarium-create-namespace:0.0.3
+          image: dangoldstein3/aquarium-create-namespace:0.0.1
           ports:
             - containerPort: 8080
