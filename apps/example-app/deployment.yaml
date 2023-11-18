@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: example-app-deployment
   labels:
-    hiroshi.dev/trace-id: c7fea81f-4856-47e5-8276-5f60a4d54fda
+    hiroshi.dev/trace-id: ec87b583-8456-49e9-94d5-bad0fedb2b00
 spec:
   selector:
     matchLabels:
