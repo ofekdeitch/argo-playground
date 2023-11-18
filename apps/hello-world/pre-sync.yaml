@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: hello-world-presync-notification-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello-world-presync-notification
+          image: curlimages/curl
+          command:
+            - curl
+            - -X
+            - POST
+            - --json
+            - {"traceId":"59c0b1ad-aa0c-4fa9-b00b-2c4867a099b4","status":"Started"}
+            - https://e7804445047c11576bd28107239ce892.serveo.net
+      restartPolicy: Never
+  backoffLimit: 2
