@@ -16,7 +16,7 @@ spec:
             - -X
             - POST
             - --json
-            - {"traceId":"59c0b1ad-aa0c-4fa9-b00b-2c4867a099b4","status":"Started"}
-            - https://e7804445047c11576bd28107239ce892.serveo.net
+            - {"traceId":"25632d7b-5726-4ca0-bd7b-b848ca627938","status":"Started"}
+            - https://9f014d81fd21f5d69d95a57f743b7588.serveo.net/webhook/argocd
       restartPolicy: Never
   backoffLimit: 2
