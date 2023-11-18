@@ -16,7 +16,7 @@ spec:
             - "-X"
             - "POST"
             - "--json"
-            - "{\"traceId\":\"ec87b583-8456-49e9-94d5-bad0fedb2b00\",\"status\":\"Started\"}"
+            - "{\"traceId\":\"c88b69c6-83c6-4615-823f-6f56dbeacc68\",\"status\":\"Started\"}"
             - "https://9f014d81fd21f5d69d95a57f743b7588.serveo.net/webhook/argocd"
       restartPolicy: Never
   backoffLimit: 2
