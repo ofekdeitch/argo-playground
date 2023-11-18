@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-world-deployment
+  labels:
+    blah: blah3
+    hiroshi-trace-id: "df86e5fa-ce8a-4dc1-bc98-69dded47135a"
+spec:
+  selector:
+    matchLabels:
+      app: hello-world
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: dangoldstein3/aquarium-create-namespace:0.0.3
+        ports:
+        - containerPort: 8080
