@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: hello-world-deployment
   labels:
-    hiroshi.dev/trace-id: 59c0b1ad-aa0c-4fa9-b00b-2c4867a099b4
+    hiroshi.dev/trace-id: 25632d7b-5726-4ca0-bd7b-b848ca627938
 spec:
   selector:
     matchLabels:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: hello-world
-          image: dangoldstein3/aquarium-create-namespace:0.0.5
+          image: dangoldstein3/aquarium-create-namespace:0.0.3
           ports:
             - containerPort: 8080
