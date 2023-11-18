@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: hello-world-postsync-notification-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: hello-world-postsync-notification
+          image: curlimages/curl
+          command:
+            - curl
+            - -X
+            - POST
+            - --json
+            - {"traceId":"59c0b1ad-aa0c-4fa9-b00b-2c4867a099b4","status":"Succeeded"}
+            - https://e7804445047c11576bd28107239ce892.serveo.net
+      restartPolicy: Never
+  backoffLimit: 2
