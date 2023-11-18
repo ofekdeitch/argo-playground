@@ -16,7 +16,7 @@ spec:
           - "-X"
           - "POST"
           - "--json"
-          - "{\"status\": \"Succeeded\", \"traceId\": \"08fc0906-a509-41c0-a08c-736582d486f6\"}"
+          - "{\"status\": \"Succeeded\", \"traceId\": \"97d4a03b-1781-4244-8487-7c085adc4268\"}"
           - "https://78629df81e5d6f61fd615a1e4231e628.serveo.net"
       restartPolicy: Never
   backoffLimit: 2
