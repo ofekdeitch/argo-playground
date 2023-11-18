@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: hello-world
-  replicas: 50
+  replicas: 5
   template:
     metadata:
       labels:
