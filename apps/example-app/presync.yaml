@@ -15,8 +15,8 @@ spec:
           - "curl"
           - "-X"
           - "POST"
-          - "--data-urlencode"
-          - "payload={\"status\": \"Started\", \"traceId\": \"7679d822-20c5-477f-8463-e6db74b92e22\"}"
+          - "--json"
+          - "'{\"status\": \"Started\", \"traceId\": \"7679d822-20c5-477f-8463-e6db74b92e22\"}'"
           - "https://90031d807357a17f00b04cdf356d1c4b.serveo.net"
       restartPolicy: Never
   backoffLimit: 2
