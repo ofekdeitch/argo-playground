@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: example-app-postsync-notification-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+spec:
+  template:
+    spec:
+      containers:
+        - name: example-app-postsync-notification
+          image: curlimages/curl
+          command:
+            - "curl"
+            - "-X"
+            - "POST"
+            - "--json"
+            - "{\"traceId":"816401b6-3bf0-4125-bbed-395f65d85aff","status":"Succeeded"}"
+            - "https://9f014d81fd21f5d69d95a57f743b7588.serveo.net/webhook/argocd"
+      restartPolicy: Never
+  backoffLimit: 2
