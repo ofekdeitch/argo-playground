@@ -4,7 +4,7 @@ metadata:
   name: example-app-deployment
   labels:
     blah: blah2
-    traceId: 7679d822-20c5-477f-8463-e6db74b92e22
+    hiroshi-trace-id: "7679d822-20c5-477f-8463-e6db74b92e22"
 spec:
   selector:
     matchLabels:
