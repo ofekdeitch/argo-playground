@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: example-app
-  replicas: 6
+  replicas: 3
   template:
     metadata:
       labels:
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: dangoldstein3/aquarium-create-namespace:0.0.3
+          image: dangoldstein3/aquarium-create-namespace:0.0.4
           ports:
             - containerPort: 8080
