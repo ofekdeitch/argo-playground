@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: example-app
-          image: dangoldstein3/aquarium-create-namespace:0.0.4
+          image: dangoldstein3/aquarium-create-namespace:0.0.5
           ports:
             - containerPort: 8080
